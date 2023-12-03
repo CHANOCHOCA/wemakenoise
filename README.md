@@ -12,7 +12,7 @@ Este proyecto web es parte del curso CODERHOUSE Desarrollo Web Flex donde el pro
 - Base de Datos: PosgreSQL
 - Herramientas de Desarrollo: Intellij IDEA
 - Control de Versiones: Git
-- Planificación: Whysmical
+- Planificación: Whimsical
 
 ## Funcionalidades
 - [ ] Página de inicio (enfocado a atraer la atención al cliente).
