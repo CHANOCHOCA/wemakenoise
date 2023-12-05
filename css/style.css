@@ -40,7 +40,7 @@ header a, footer a {
 
 /*************** BLOG ***************/
 
-.espacio2 button a, .espacio2 button {
+.espacio2 button a, button[type="submit"]{
     background-color: #231f20;
     padding: 17px 0;
     color: white;
@@ -155,7 +155,6 @@ video {
 
 .submit {
     margin-top: 20px;
-    height: 50px;
 }
 
 .espacio6 {
@@ -248,7 +247,7 @@ footer .logo {
 /*************** PROPIEDADES GENÉRICAS ***************/
 
 
-h1, h2, h3, h4, h5, h6, p, a, li{
+h1, h2, h3, h4, h5, h6, p, a, li, button{
     font-family: 'Montserrat', sans-serif;
 }
 
