@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
 
-/* ---------------BODY--------------- */
+/*************** BODY ***************/
 
 body {
     margin: 0 auto;
 }
 
-/* ---------------HEADER--------------- */
+/*************** HEADER ***************/
 
 header{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 10px 10px;
+    padding: 10px;
     box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -23,70 +18,35 @@ header{
     height: 50px;
 }
 
-.links, .opciones {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    column-gap: 1.25rem;
-    margin: 0 auto;
-}
-
 header a, footer a {
     padding: 17px 0;
 }
 
-/* ---------------MAIN--------------- */
+.espacio4 {
+    column-gap: 1.25rem;
+    margin: 0 auto;
+}
+
+/*************** INICIO ***************/
 
 .container {
     padding: 0 3%;
 }
 
 .imagen img{
-    width: 100px;
-    height: 100px;
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
 }
 
 .item {
     width: 50%;
 }
 
-/* ---------------BLOG--------------- */
+/*************** BLOG ***************/
 
-.blog {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    column-gap: 1.25rem;
-    margin: 20px 0;
-}
-
-.blog h1 {
-    margin: 0;
-}
-
-.search-box label {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    padding: 5px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    height: 38px;
-}
-
-.blog button a, .blog button{
-    padding: 17px 0;
+.espacio2 button a, .espacio2 button {
     background-color: #231f20;
+    padding: 17px 0;
     color: white;
 }
 
@@ -95,80 +55,46 @@ header a, footer a {
     padding: 11px 0;
 }
 
-.search-box button {
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.search-box img, .izquierda, .derecha {
-    height: 20px;
-    width: 20px;
-}
-
-.flechas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-}
-
-.flechas a {
+.flexbox2 a {
     padding: 18px 0;
 }
 
-.flex2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.espacio2 {
+    column-gap: 1.25rem;
+    margin: 20px 0;
 }
 
-article img {
-    width: 200px;
-    height: 200px;
+.espacio3 {
+    border: 1px solid black;
+    padding: 5px;
+    height: 38px;
 }
 
-/* ---------------SOBRE NOSOTROS--------------- */
+/*************** SOBRE NOSOTROS ***************/
 
-.carrusel {
-    display: flex;
+.iconos a img {
+    width: 30px;
+    height: 30px;
+}
+
+.flexbox2 img {
     height: 150px;
-}
-
-.carrusel img {
     width: 20%;
 }
 
-.flex1 {
-    display: flex;
-    column-gap: 6rem;
-}
-
-.lideres, .lideres-parrafos {
+.lideres, .lideres-parrafos, .texto, .flexbox5 .texto, .flexbox5 .imagen {
     flex: 1;
 }
 
-.tipos {
+.tipos, .valores-subtitulo {
     text-align: center;
 }
 
-.tipo-personas {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: start;
-}
-
-.tipo-personas img {
-    width: 200px;
-    height: 200px;
+.flexbox5 .persona img {
     border-radius: 100px;
 }
 
-.tipo-personas .persona {
+.flexbox5 .persona, .valor {
     width: 200px;
 }
 
@@ -188,48 +114,18 @@ video {
     object-fit: cover;
 }
 
-.nuestro-equipo, .nuestra-mision {
-    display: flex;
-    column-gap: 3rem;
-}
-
-.nuestro-equipo .texto, .nuestro-equipo .imagen,
-.nuestra-mision .imagen, .nuestra-mision .texto{
-    flex: 1;
-}
-.nuestro-equipo .imagen img, .nuestra-mision .imagen img {
-    width: 100%;
-    height: 50vh;
-}
-
-.nuestro-equipo .texto {
+.flexbox5 .texto {
     text-align: end;
 }
-.nuestra-mision .texto {
+.flexbox5 .texto2 {
     text-align: start;
 }
 
-.valores-subtitulo {
-    text-align: center;
+.espacio5 {
+    column-gap: 3rem;
 }
 
-.valores {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.valores img {
-    width: 200px;
-    height: 200px;
-}
-
-.valor {
-    width: 200px;
-}
-
-/* ---------------NUESTRO EQUIPO--------------- */
+/*************** NUESTRO EQUIPO ***************/
 
 .background {
     background-image: url("../assets/nuestro-equipo/equipo.jpg");
@@ -245,25 +141,12 @@ video {
     margin-top: 0;
 }
 
-/* CONTACTO */
-
-.flexbox {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    align-items: center;
-    column-gap: 2rem;
-    margin: 20px 0;
-}
+/*************** CONTACTO ***************/
 
 .formulario {
     flex: 1;
     background-color: #85c441;
     padding-left: 20px;
-}
-
-.texto {
-    flex: 1;
 }
 
 .formulario ul{
@@ -280,7 +163,17 @@ video {
     height: 50px;
 }
 
-/* ---------------FOOTER--------------- */
+.espacio6 {
+    column-gap: 2rem;
+    margin: 20px 0;
+}
+
+.imagen-flexbox5, .imagen-flexbox5 img{
+    width: 40vw;
+    height: 300px;
+}
+
+/*************** FOOTER ***************/
 
 footer {
     text-align: center;
@@ -288,16 +181,16 @@ footer {
     color: white;
 }
 
-.links a, .search{
+.flexbox2 a, .search{
     height: 30px;
     width: 30px;
 }
 
-footer .links{
+footer .flexbox2{
     margin-top: 20px;
 }
 
-footer .links a, footer .llamar a {
+footer .flexbox2 a, footer .llamar a {
     color: white;
 }
 
@@ -314,7 +207,51 @@ footer .logo {
     margin-bottom: 0;
 }
 
-/* ---------------PROPIEDADES GENÉRICAS--------------- */
+/***************  FLEXBOX ***************/
+
+.flexbox1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexbox2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flexbox4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.flexbox5 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*************** PROPIEDADES GENÉRICAS ***************/
 
 
 h1, h2, h3, h4, h5, h6, p, a, li{
