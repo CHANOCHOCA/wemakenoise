@@ -60,6 +60,20 @@ video {
     display: flex;
 }
 
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
 .texto-centrado {
     text-align: center;
 }

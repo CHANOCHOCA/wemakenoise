@@ -10,8 +10,6 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
-// JavaScript file
-
 window.onload = function() {
     var titulos = document.querySelectorAll('.titulo');
     var contenidos = document.querySelectorAll('.contenido');
@@ -35,3 +33,16 @@ window.onload = function() {
         contenidos[0].className = 'contenido visible flexbox1 espacio5';
     }
 };
+
+function changeTestimonial(index) {
+    const testimonials = document.querySelectorAll('.testimonial');
+    const icons = document.querySelectorAll('.flexbox2 .buscar');
+
+    // Remove active class from all testimonials and icons
+    testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+    icons.forEach(icon => icon.src = 'assets/index/boton.svg');
+
+    // Add active class to the selected testimonial and change the icon
+    testimonials[index - 1].classList.add('active');
+    icons[index - 1].src = 'assets/index/boton-relleno.svg';
+}

@@ -26,20 +26,19 @@
     </header>
 
     <main>
-        <div class="video">
+        <section class="video">
             <video controls>
                 <source src="assets/index/inicio.mp4">
             </video>
-        </div>
+        </section>
 
         <section class="espacio">
-            <ul class="flexbox2">
+            <ul class="flexbox2 espacio-flex">
                 <li class="titulo active"><a href="#">Inspiración creativa</a></li>
                 <li class="titulo"><a href="#">Enciende tu marketing</a></li>
                 <li class="titulo"><a href="#">Desarrollo básico</a></li>
             </ul>
             <div class="contenido">
-                <!-- Contenido de "Inspiración creativa" -->
                 <div class="mitad-pantalla">
                     <img src="assets/index/idea.jpg" alt="">
                 </div>
@@ -51,7 +50,6 @@
             </div>
 
             <div class="contenido oculto">
-                <!-- Contenido de "Enciende tu marketing" -->
                 <div class="mitad-pantalla">
                     <img src="assets/index/idea.jpg" alt="">
                 </div>
@@ -63,7 +61,6 @@
             </div>
 
             <div class="contenido oculto">
-                <!-- Contenido de "Desarrollo básico" -->
                 <div class="mitad-pantalla">
                     <img src="assets/index/idea.jpg" alt="">
                 </div>
@@ -81,27 +78,33 @@
             </div>
             <div class="mitad-pantalla">
                 <h6>TESTIMONIOS</h6>
-                <ul>
-                    <li>
-                        <h2>"We Make Noise ofrece un servicio de alta calidad con experiencia personal. Puedo estar tranquilo sabiendo que las soluciones digitales de las empresas se manejan con estrategia y cuidado. ¡We Make Noise me ha permitido concentrarme en hacer crecer mi negocio! ¡Muy recomendable!"</h2>
-                        <p>jesse r.</p>
-                    </li>
+                <div>
+                    <div class="testimonials">
+                        <div class="testimonial active">
+                            <h2>"We Make Noise ofrece un servicio de alta calidad con experiencia personal. Puedo estar tranquilo sabiendo que las soluciones digitales de las empresas se manejan con estrategia y cuidado. ¡We Make Noise me ha permitido concentrarme en hacer crecer mi negocio! ¡Muy recomendable!"</h2>
+                            <p>jesse r.</p>
+                        </div>
+                        <div class="testimonial">
+                            <h2>"Cuando se trata de SEO y marketing, Federico tiene una visión que no muchos tienen. Piensa fuera de lo común para ofrecer un trabajo que, en última instancia, esté impulsado por los resultados. Lo recomiendo absolutamente tanto a empresas locales como nacionales".</h2>
+                            <p>juan c.</p>
+                        </div>
+                        <div class="testimonial">
+                            <h2>"El propietario tiene una gran actitud y siempre está dispuesto a hacer un esfuerzo adicional. ¡Muy creativo y eficaz!"</h2>
+                            <p>James C.</p>
+                        </div>
+                        <div class="testimonial">
+                            <h2>"... Federico es un gran comunicador y oyente cuando se trataba de compartir ideas y educarme sobre el proceso. También fue maravilloso al mantenerme al tanto de lo que estaba sucediendo todo el tiempo. Las sugerencias, ideas y creatividad que tenía fueron siempre acertado. El resultado fue un aumento en ventas con el que estoy encantado..."</h2>
+                            <p>Daniel Hollis</p>
+                        </div>
+                    </div>
 
-                    <li>
-                        <h2>"Cuando se trata de SEO y marketing, Federico tiene una visión que no muchos tienen. Piensa fuera de lo común para ofrecer un trabajo que, en última instancia, esté impulsado por los resultados. Lo recomiendo absolutamente tanto a empresas locales como nacionales".</h2>
-                        <p>juan c.</p>
-                    </li>
-
-                    <li>
-                        <h2>"El propietario tiene una gran actitud y siempre está dispuesto a hacer un esfuerzo adicional. ¡Muy creativo y eficaz!"</h2>
-                        <p>James C.</p>
-                    </li>
-
-                    <li>
-                        <h2>"... Federico es un gran comunicador y oyente cuando se trataba de compartir ideas y educarme sobre el proceso. También fue maravilloso al mantenerme al tanto de lo que estaba sucediendo todo el tiempo. Las sugerencias, ideas y creatividad que tenía fueron siempre acertado. El resultado fue un aumento en ventas con el que estoy encantado..."</h2>
-                        <p>Daniel Hollis</p>
-                    </li>
-                </ul>
+                    <div class="flexbox2 iconos espacio-flex">
+                        <a onclick="changeTestimonial(1)"><img src="assets/index/boton-relleno.svg" alt="" class="buscar"></a>
+                        <a onclick="changeTestimonial(2)"><img src="assets/index/boton.svg" alt="" class="buscar"></a>
+                        <a onclick="changeTestimonial(3)"><img src="assets/index/boton.svg" alt="" class="buscar"></a>
+                        <a onclick="changeTestimonial(4)"><img src="assets/index/boton.svg" alt="" class="buscar"></a>
+                    </div>
+                </div>
             </div>
         </section>
 
