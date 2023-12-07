@@ -1,106 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
 
 /*************** BODY ***************/
-
 body {
     margin: 0 auto;
 }
 
-/*************** HEADER ***************/
-
-header{
-    padding: 10px;
-    box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
-}
+/***************  HEADER ***************/
 
 .logo {
     width: 200px;
     height: 50px;
 }
 
-header a, footer a {
-    padding: 17px 0;
+header {
+    position: sticky;
+    box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    z-index: 1;
+    transition: top 0.3s ease-in-out;
 }
 
-.espacio4 {
-    column-gap: 1.25rem;
-    margin: 0 auto;
+header button, footer button {
+    height: 50px;
+    background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
 }
 
-/*************** INICIO ***************/
-
-.imagen img{
-    width: 200px;
-    height: 200px;
-}
-
-.item {
-    width: 50%;
-}
-
-/*************** BLOG ***************/
-
-.espacio2 button a, button[type="submit"]{
-    background-color: #231f20;
-    padding: 17px 0;
-    color: white;
-}
-
-.search-box input {
-    border: none;
-    padding: 11px 0;
-}
-
-.flexbox2 a {
-    padding: 18px 0;
-}
-
-.espacio2 {
-    column-gap: 1.25rem;
-    margin: 20px 0;
-}
-
-.espacio3 {
-    border: 1px solid black;
-    padding: 5px;
-    height: 38px;
-}
-
-/*************** SOBRE NOSOTROS ***************/
-
-.iconos a img {
-    width: 30px;
-    height: 30px;
-}
-
-.flexbox2 img {
-    height: 150px;
-    width: 20%;
-}
-
-.lideres, .lideres-parrafos, .texto, .flexbox5 .texto, .flexbox5 .imagen {
-    flex: 1;
-}
-
-.tipos, .valores-subtitulo {
-    text-align: center;
-}
-
-.flexbox5 .persona img {
-    border-radius: 100px;
-}
-
-.flexbox5 .persona, .valor {
-    width: 200px;
-}
-
-.espacio {
-    padding: 3% 3%;
-}
+/***************  INICIO ***************/
 
 .video {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
 }
 
 video {
@@ -109,20 +38,84 @@ video {
     object-fit: cover;
 }
 
-.flexbox5 .texto {
-    text-align: end;
+.espacio {
+    margin: 3%;
 }
-.flexbox5 .texto2 {
+
+.mitad-pantalla {
+    flex: 1;
+    width: 50%;
+}
+
+.mitad-pantalla img {
+    width: 100%;
+    height: 100%;
+}
+
+.contenido {
+    display: none;
+}
+
+.contenido .visible {
+    display: flex;
+}
+
+.texto-centrado {
+    text-align: center;
+}
+
+.texto-izquierda {
     text-align: start;
 }
 
-.espacio5 {
-    column-gap: 3rem;
+.texto-derecha {
+    text-align: end;
 }
 
-/*************** NUESTRO EQUIPO ***************/
+.mitad-por-bloque {
+    width: 50%;
+}
 
-.background {
+/***************  BLOG ***************/
+
+.borde {
+    border: 1px solid black;
+}
+
+.relleno-completo {
+    padding: 20px;
+}
+
+article img {
+    width: 300px;
+    height: 300px;
+}
+
+/***************  SOBRE NOSOTROS ***************/
+
+.carrusel {
+    width: 20%;
+    height: 200px;
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+.tamanio15 {
+    width: 15vw;
+    height: 50vh;
+}
+
+.tamanio15 img{
+    width: 15vh;
+    height: 15vw;
+
+}
+
+/***************  NUESTRO EQUIPO ***************/
+
+.background-image {
     background-image: url("../assets/nuestro-equipo/equipo.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -130,74 +123,61 @@ video {
     background-size: cover;
     width: 100%;
     height: 400px;
+    margin-bottom: 3%;
 }
 
-.background h1 {
-    margin-top: 0;
-}
-
-/*************** CONTACTO ***************/
-
-.formulario {
-    flex: 1;
-    background-color: #85c441;
-    padding-left: 20px;
-}
-
-.formulario ul{
+.grid1 {
     display: grid;
 }
 
-#nombreyapellido, #mail, #numero-telefono, #nombre-compania, .formulario textarea {
-    width: 95%;
-    margin-bottom: 20px;
+.persona img {
+    width: 26vw;
+    height: 40vh;
 }
 
-.submit {
-    margin-top: 20px;
+.relleno20 {
+    margin: 20px 100px 200px 100px;
 }
 
-.espacio6 {
-    column-gap: 2rem;
+/***************  CONTACTO ***************/
+
+.alto100vh {
+    height: 60vh;
 }
 
-.imagen-flexbox5, .imagen-flexbox5 img{
-    width: 40vw;
-    height: 300px;
+.verde {
+    height: inherit;
+    background-color: #85c441;
+    padding-left: 3%;
 }
 
-/*************** FOOTER ***************/
+#nombreyapellido, #mail, #numero-telefono, #nombre-compania, #mensaje{
+    width: 93%;
+    height: 2.5rem;
+}
+
+/***************  FOOTER ***************/
 
 footer {
-    text-align: center;
     background-color: #231f20;
+    text-align: center;
+}
+
+footer, footer a {
     color: white;
 }
 
-.flexbox2 a, .search{
-    height: 30px;
-    width: 30px;
-}
-
-footer .flexbox2{
-    margin-top: 20px;
-}
-
-footer .flexbox2 a, footer .llamar a {
-    color: white;
-}
-
-footer .logo {
-    margin: 20px 0;
-}
-
-.llamar {
-    background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
-    padding: 17px 0;
-}
-
-.copyright {
+.no-margin-bottom {
     margin-bottom: 0;
+}
+
+.iconos a, .iconos img[class="buscar"] {
+    width: 30px;
+    height: 30px;
+}
+
+.espacio-flex {
+    column-gap: 1.25rem;
 }
 
 /***************  FLEXBOX ***************/
@@ -244,10 +224,17 @@ footer .logo {
     align-items: flex-start;
 }
 
-/*************** PROPIEDADES GENÉRICAS ***************/
+.flexbox6 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 
+/***************  PROPIEDADES GENÉRICAS ***************/
 
-h1, h2, h3, h4, h5, h6, p, a, li, button{
+h1, h2, h3, h4, h5, h6, p, a, label {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -256,9 +243,13 @@ ul {
     padding-left: 0;
 }
 
-a, button {
+a {
     text-decoration: none;
     color: black;
-    border: none;
     cursor: pointer;
+    padding: 17px 0;
+}
+
+button, .no-borde {
+    border: none;
 }

@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
 
     <title>WeMakeNoise | Blog</title>
 </head>
 <body>
-    <header class="flexbox1">
-        <img src="../assets/header-y-footer/logo-header.svg" alt="Logo" class="logo">
+    <header class="flexbox1 relleno-completo">
+        <div><img src="../assets/header-y-footer/logo-header.svg" alt="Logo" class="logo"></div>
         <nav>
-            <ul class="flexbox2 espacio4">
+            <ul class="flexbox2 espacio-flex">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
@@ -25,36 +26,31 @@
     </header>
 
     <main>
-        <section class="espacio">
-            <div class="blog espacio2 flexbox1">
-                <h1>En el blog</h1>
+        <section class="espacio flexbox1">
+            <h1>En el blog</h1>
 
-                <div class="blog espacio2 flexbox1">
-                    <form class="search-box">
-                        <div>
-                            <label for="buscar" class="flexbox1 espacio3">
-                                <img src="../assets/blog/search-icon.svg" alt="" class="search">
-                                <input type="text" id="buscar" placeholder="Buscar">
-                            </label>
-                        </div>
-                    </form>
-                    <div>
-                        <button type="submit"><a href="blog.html">Susbcríbase ahora</a></button>
-                    </div>
+            <div class="flexbox1 espacio-flex">
+                <form>
+                    <label for="buscar" class="iconos flexbox1 borde">
+                        <img src="../assets/blog/search-icon.svg" alt="" class="buscar">
+                        <input type="text" id="buscar" placeholder="Buscar" class="iconos relleno-completo no-borde">
+                    </label>
+                </form>
+                <div>
+                    <button type="submit"><a href="blog.html">Susbcríbase ahora</a></button>
                 </div>
             </div>
         </section>
 
         <section class="flexbox2 iconos">
 
-            <a href="blog.html"><img src="../assets/blog/izquierda.svg" alt="" class="izquierda"></a>
+            <a href="blog.html"><img src="../assets/blog/izquierda.svg" alt="" class="buscar"></a>
 
             <div>
                 <h3>Página 1 de X</h3>
             </div>
 
-            <a href="blog.html"><img src="../assets/blog/derecha.svg" alt="" class="derecha"></a>
-
+            <a href="blog.html"><img src="../assets/blog/derecha.svg" alt="" class="buscar"></a>
         </section>
 
         <section class="espacio flexbox4">
@@ -88,45 +84,40 @@
 
         <section class="flexbox2 iconos">
 
-            <a href="blog.html"><img src="../assets/blog/izquierda.svg" alt="" class="izquierda"></a>
+            <a href="blog.html"><img src="../assets/blog/izquierda.svg" alt="" class="buscar"></a>
 
             <div>
                 <h3>Página 1 de X</h3>
             </div>
 
-            <a href="blog.html"><img src="../assets/blog/derecha.svg" alt="" class="derecha"></a>
-
+            <a href="blog.html"><img src="../assets/blog/derecha.svg" alt="" class="buscar"></a>
         </section>
     </main>
 
     <footer>
-        <div class="contenido-footer">
-            <img src="../assets/header-y-footer/logo-footer.svg" alt="Logo" class="logo">
-            <div>
-                <button class="llamar"><a href="tel:542364533342">+54 9 236 453-3342</a></button>
-            </div>
-            <div class="footer-menu">
-                <ul class="flexbox2 espacio4">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+        <div><img src="../assets/header-y-footer/logo-footer.svg" alt="Logo" class="logo"></div>
+        <div>
+            <button><a href="tel:542364533342">+54 9 236 453-3342</a></button>
+        </div>
+        <ul class="flexbox2 espacio-flex">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="nuestro-equipo.html">Nuestro equipo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
 
-            <p>En We Make Noise , nos enorgullecemos de ofrecer a las empresas un producto increíble que sienten que no podrían conseguir en ningún otro lugar. Agregar pasión a cada proyecto marca la diferencia.</p>
+        <p>En We Make Noise , nos enorgullecemos de ofrecer a las empresas un producto increíble que sienten que no podrían conseguir en ningún otro lugar. Agregar pasión a cada proyecto marca la diferencia.</p>
 
-            <p>Av. Arias 81, B6000 Junín, Provincia de Buenos Aires</p>
+        <a href="https://maps.app.goo.gl/94KoAEDmAYnT4Mcw5">Av. Arias 81, B6000 Junín, Provincia de Buenos Aires</a>
 
-            <div class="flexbox2 espacio4 iconos">
-                <a href="https://ar.linkedin.com/in/wemakenoisemarketing?trk=public_profile_browsemap"><img src="../assets/header-y-footer/linkedin.svg" alt="linkedin"></a>
-                <a href="https://m.facebook.com/WMNmarketingktdigital/"><img src="../assets/header-y-footer/facebook.svg" alt="facebook"></a>
-                <a href="https://www.instagram.com/wemakenoisemkt/"><img src="../assets/header-y-footer/instagram.svg" alt="instagram"></a>
-            </div>
+        <div class="flexbox2 iconos espacio-flex">
+            <a href="https://ar.linkedin.com/in/wemakenoisemarketing?trk=public_profile_browsemap"><img src="../assets/header-y-footer/linkedin.svg" alt="linkedin"></a>
+            <a href="https://m.facebook.com/WMNmarketingktdigital/"><img src="../assets/header-y-footer/facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/wemakenoisemkt/"><img src="../assets/header-y-footer/instagram.svg" alt="instagram"></a>
         </div>
 
-        <p class="copyright">© 2023 WeMakeNoise</p>
+        <p class="no-margin-bottom">© 2023 WeMakeNoise</p>
     </footer>
 </body>
 </html>
