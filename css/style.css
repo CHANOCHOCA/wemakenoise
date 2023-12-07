@@ -5,27 +5,12 @@ body {
     margin: 0 auto;
 }
 
-/***************  HEADER ***************/
+/*************** DIMENSIONES ***************/
 
 .logo {
     width: 200px;
     height: 50px;
 }
-
-header {
-    position: sticky;
-    box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    z-index: 1;
-    transition: top 0.3s ease-in-out;
-}
-
-header button, footer button {
-    height: 50px;
-    background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
-}
-
-/***************  INICIO ***************/
 
 .video {
     width: 100%;
@@ -39,18 +24,113 @@ video {
 }
 
 .espacio {
-    margin: 3%;
+    padding: 3%;
 }
 
 .mitad-pantalla {
     flex: 1;
-    width: 50%;
 }
 
-.mitad-pantalla img {
+.height600px {
+    height: 600px;
+}
+
+img {
     width: 100%;
     height: 100%;
 }
+
+.relleno-completo, footer .logo, footer nav {
+    padding: 17px;
+}
+
+.width400px {
+    width: 400px;
+}
+
+article .imagen {
+    width: 400px;
+    height: 300px;
+}
+
+.carrusel {
+    width: 20%;
+    height: 200px;
+}
+
+.tamanio300px {
+    width: 300px;
+    height: 300px;
+}
+
+.width300px {
+    width: 300px;
+}
+
+span .imagen {
+    width: 300px;
+    height: 400px;
+}
+
+.relleno20 {
+    padding: 20px 100px 300px 100px;
+}
+
+#nombreyapellido, #mail, #numero-telefono, #nombre-compania, #mensaje{
+    width: 93%;
+    height: 2.5rem;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.iconos a, .iconos img[class="buscar"] {
+    width: 30px;
+    height: 30px;
+}
+
+.espacio-flex {
+    column-gap: 1.25rem;
+}
+
+.alto60vh {
+    height: 60vh;
+}
+
+/***************  BOTONES ***************/
+
+button[type="submit"], button[class="titulo"], button[class="titulo active"]{
+    height: 50px;
+    background: #231f20;
+    color: white;
+}
+
+button[class="titulo"], button[class="titulo active"] {
+    border-style: double;
+    border-radius: 50%;
+}
+
+button[class="titulo"] a, button[class="titulo active"] a{
+    color: white;
+}
+
+/***************  HEADER ***************/
+
+header {
+    position: sticky;
+    box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    z-index: 1;
+    transition: top 0.3s ease-in-out;
+}
+
+header button, footer button {
+    background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
+    height: 50px;
+}
+
+/***************  INICIO ***************/
 
 .contenido {
     display: none;
@@ -86,46 +166,20 @@ video {
     text-align: end;
 }
 
-.mitad-por-bloque {
-    width: 50%;
-}
-
 /***************  BLOG ***************/
 
 .borde {
     border: 1px solid black;
 }
 
-.relleno-completo {
-    padding: 20px;
-}
-
-article img {
-    width: 300px;
-    height: 300px;
-}
-
 /***************  SOBRE NOSOTROS ***************/
 
-.carrusel {
-    width: 20%;
-    height: 200px;
-}
+
 
 .circular {
     border-radius: 50%;
 }
 
-.tamanio15 {
-    width: 15vw;
-    height: 50vh;
-}
-
-.tamanio15 img{
-    width: 15vh;
-    height: 15vw;
-
-}
 
 /***************  NUESTRO EQUIPO ***************/
 
@@ -140,35 +194,15 @@ article img {
     margin-bottom: 3%;
 }
 
-.grid1 {
-    display: grid;
-}
 
-.persona img {
-    width: 26vw;
-    height: 40vh;
-}
-
-.relleno20 {
-    margin: 20px 100px 200px 100px;
-}
 
 /***************  CONTACTO ***************/
-
-.alto100vh {
-    height: 60vh;
-}
-
 .verde {
     height: inherit;
     background-color: #85c441;
     padding-left: 3%;
 }
 
-#nombreyapellido, #mail, #numero-telefono, #nombre-compania, #mensaje{
-    width: 93%;
-    height: 2.5rem;
-}
 
 /***************  FOOTER ***************/
 
@@ -181,20 +215,19 @@ footer, footer a {
     color: white;
 }
 
-.no-margin-bottom {
-    margin-bottom: 0;
-}
-
-.iconos a, .iconos img[class="buscar"] {
-    width: 30px;
-    height: 30px;
-}
-
-.espacio-flex {
-    column-gap: 1.25rem;
-}
-
 /***************  FLEXBOX ***************/
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid1 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+}
 
 .flexbox1 {
     display: flex;
@@ -246,15 +279,33 @@ footer, footer a {
     align-items: flex-start;
 }
 
+.flexbox7 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.flexbox8 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
 /***************  PROPIEDADES GENÉRICAS ***************/
 
-h1, h2, h3, h4, h5, h6, p, a, label {
+h1, h2, h3, h4, h5, h6, p, a, label, button {
     font-family: 'Montserrat', sans-serif;
 }
 
 ul {
     list-style: none;
     padding-left: 0;
+    margin: 0 auto;
 }
 
 a {
