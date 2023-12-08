@@ -100,7 +100,7 @@ span .imagen {
 
 /***************  BOTONES ***************/
 
-button[type="submit"], button[class="titulo"], button[class="titulo active"]{
+button[type="submit"], button[class="titulo"], button[class="titulo active"], button[class="subscribirse"] {
     height: 50px;
     background: #231f20;
     color: white;
@@ -111,7 +111,7 @@ button[class="titulo"], button[class="titulo active"] {
     border-radius: 50%;
 }
 
-button[class="titulo"] a, button[class="titulo active"] a{
+button[class="titulo"] a, button[class="titulo active"] a, button[class="subscribirse"] a {
     color: white;
 }
 
