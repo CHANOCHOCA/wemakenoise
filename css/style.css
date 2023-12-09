@@ -132,7 +132,7 @@ header button, footer button {
 
 /***************  INICIO ***************/
 
-.contenido {
+.contenido, .testimonial{
     display: none;
 }
 
@@ -144,10 +144,6 @@ header button, footer button {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-.testimonial {
-    display: none;
 }
 
 .testimonial.active {
@@ -317,4 +313,73 @@ a {
 
 button, .no-borde {
     border: none;
+}
+
+/***************  RESPONSIVE ***************/
+
+.iconos-responsive, .footer-responsive {
+    display: none;
+}
+
+@media only screen and (max-width: 426px) {
+    .logo {
+        width: 100px;
+        height: 25px;
+    }
+
+    header nav, footer nav {
+        display: none;
+    }
+    .iconos-responsive {
+        display: block;
+        width: 25px;
+        height: 25px;
+    }
+    .footer-responsive {
+        display: block;
+    }
+
+    /***************  INDEX ***************/
+
+    .flexbox1, .flexbox2, .flexbox5, .flexbox6, .flexbox8 {
+        z-index: 1;
+        flex-wrap: wrap;
+    }
+
+    section div, section{
+        flex-wrap: wrap;
+    }
+
+    .mitad-pantalla {
+        flex: none;
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /***************  BLOG ***************/
+
+    .width400px, article .imagen, .width300px, span .imagen {
+        width: 280px;
+    }
+
+    /***************  SOBRE NOSOTROS ***************/
+
+    .texto-derecha, .texto-izquierda {
+        text-align: center;
+    }
+
+    .relleno20 {
+        padding: 100px;
+    }
+
+    /***************  CONTACTO ***************/
+
+    .alto60vh {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
 }
