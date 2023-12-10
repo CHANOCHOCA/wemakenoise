@@ -2,12 +2,30 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;
+    const header = document.querySelector("header");
+    const navMenu = document.querySelector(".menu-desplegable");
+
     if (currentScroll > lastScroll) {
-        document.querySelector("header").style.top = "-100%";
+        header.style.top = "-100%";
+
+        // Verificar si la clase "visible1" está activada en el menú desplegable
+        if (navMenu.classList.contains("visible1")) {
+            // Si la clase está activada, establecer top en "0"
+            header.style.top = "0";
+        }
     } else {
-        document.querySelector("header").style.top = "0";
+        header.style.top = "0";
     }
     lastScroll = currentScroll;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".iconos-responsive");
+    const navMenu = document.querySelector(".menu-desplegable");
+
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("visible1");
+    });
 });
 
 window.onload = function() {
@@ -23,14 +41,13 @@ window.onload = function() {
                 // Change class to 'contenido oculto'
                 contenido.className = 'contenido oculto';
             });
-            // Change class to 'contenido visible flexbox1 espacio5'
-            contenidos[index].className = 'contenido visible flexbox1 espacio5';
+            contenidos[index].className = 'contenido visible flexbox1 espacio-flex';
         });
     });
 
     // Show the first .contenido by default
     if (contenidos.length > 0) {
-        contenidos[0].className = 'contenido visible flexbox1 espacio5';
+        contenidos[0].className = 'contenido visible flexbox1 espacio-flex';
     }
 };
 

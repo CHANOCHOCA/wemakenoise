@@ -40,7 +40,7 @@ img {
     height: 100%;
 }
 
-.relleno-completo, footer .logo, footer nav {
+.relleno-completo, footer .logo, footer nav, footer {
     padding: 17px;
 }
 
@@ -98,20 +98,38 @@ span .imagen {
     height: 60vh;
 }
 
+.margintop20px {
+    margin-top: 20px;
+}
+
 /***************  BOTONES ***************/
 
-button[type="submit"], button[class="titulo"], button[class="titulo active"], button[class="subscribirse"] {
+li a, footer button a, section button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+section button {
     height: 50px;
-    background: #231f20;
+    background: none;
+}
+
+section button a:hover {
+    background-color: #231f20;
     color: white;
+    transition: 0.5s;
+    border-radius: 20px;
 }
 
-button[class="titulo"], button[class="titulo active"] {
-    border-style: double;
-    border-radius: 50%;
-}
-
-button[class="titulo"] a, button[class="titulo active"] a, button[class="subscribirse"] a {
+.botonestatico {
+    background-color: #231f20;
     color: white;
 }
 
@@ -125,9 +143,14 @@ header {
     transition: top 0.3s ease-in-out;
 }
 
+.verde-hover:hover {
+    background-color: #85c441;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
 header button, footer button {
     background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
-    height: 50px;
 }
 
 /***************  INICIO ***************/
@@ -150,7 +173,7 @@ header button, footer button {
     display: block;
 }
 
-.texto-centrado {
+.texto-centrado, .center-mobile {
     text-align: center;
 }
 
@@ -166,6 +189,18 @@ header button, footer button {
 
 .borde {
     border: 1px solid black;
+}
+
+label[for="buscar"] {
+    height: 50px;
+    line-height: 50px;
+}
+
+input, textarea {
+    display: block;
+    height: 100%;
+    padding: 0;
+    border: none;
 }
 
 /***************  SOBRE NOSOTROS ***************/
@@ -308,16 +343,15 @@ a {
     text-decoration: none;
     color: black;
     cursor: pointer;
-    padding: 17px 0;
 }
 
-button, .no-borde {
+.no-borde {
     border: none;
 }
 
 /***************  RESPONSIVE ***************/
 
-.iconos-responsive, .footer-responsive {
+.iconos-responsive {
     display: none;
 }
 
@@ -327,23 +361,62 @@ button, .no-borde {
         height: 25px;
     }
 
-    header nav, footer nav {
+    footer nav {
         display: none;
     }
+
+    header[class="flexbox1 relleno-completo"] {
+        flex-direction: row;
+        top: 0;
+    }
+
+    .menu-desplegable {
+        background-color: #231f20;
+        position: fixed;
+        top: 35px;
+        width: 100%;
+        height: calc(100% - 35px);
+        overflow-y: auto;
+        row-gap: 1.25rem;
+
+        left: 100%;
+        transition: left 0.5s;
+    }
+
+    header a {
+        color:white;
+    }
+
+    header li:hover {
+        background-color: #231f20;
+        transition: 0.5s;
+    }
+
+
+    .visible1 {
+        left: 0;
+    }
+
     .iconos-responsive {
         display: block;
         width: 25px;
         height: 25px;
+        background: white;
+        padding: 0;
     }
-    .footer-responsive {
-        display: block;
+
+    .relleno-completo {
+        padding: 5px;
     }
 
     /***************  INDEX ***************/
 
     .flexbox1, .flexbox2, .flexbox5, .flexbox6, .flexbox8 {
-        z-index: 1;
         flex-wrap: wrap;
+    }
+
+    .mobile-column {
+        flex-direction: column;
     }
 
     section div, section{
@@ -379,7 +452,10 @@ button, .no-borde {
 
     .alto60vh {
         height: auto;
-        margin-bottom: 20px;
+    }
+
+    .verde {
+        padding-bottom: 20px;
     }
 
 }
