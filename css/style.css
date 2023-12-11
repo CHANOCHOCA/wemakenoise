@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
 
 /*************** BODY ***************/
+
 body {
     margin: 0 auto;
 }
@@ -159,17 +160,7 @@ header button, footer button {
     display: none;
 }
 
-.contenido .visible {
-    display: flex;
-}
-
-.testimonials {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.testimonial.active {
+.contenido .visible, .testimonial.active {
     display: block;
 }
 
@@ -193,7 +184,6 @@ header button, footer button {
 
 label[for="buscar"] {
     height: 50px;
-    line-height: 50px;
 }
 
 input, textarea {
@@ -205,12 +195,9 @@ input, textarea {
 
 /***************  SOBRE NOSOTROS ***************/
 
-
-
 .circular {
     border-radius: 50%;
 }
-
 
 /***************  NUESTRO EQUIPO ***************/
 
@@ -225,15 +212,13 @@ input, textarea {
     margin-bottom: 3%;
 }
 
-
-
 /***************  CONTACTO ***************/
+
 .verde {
     height: inherit;
     background-color: #85c441;
     padding-left: 3%;
 }
-
 
 /***************  FOOTER ***************/
 
@@ -402,7 +387,6 @@ a {
         width: 25px;
         height: 25px;
         background: white;
-        padding: 0;
     }
 
     .relleno-completo {
@@ -457,5 +441,89 @@ a {
     .verde {
         padding-bottom: 20px;
     }
+}
 
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+    .logo {
+        width: 50px;
+        height: 25px;
+    }
+
+    .relleno-completo {
+        padding: 5px;
+    }
+
+    header a, section, section a, footer, footer a {
+        font-size: 0.45rem;
+    }
+
+    header a, footer a, footer button a, section button a {
+        line-height: 25px;
+    }
+
+    header ul, footer li, label[for="buscar"] {
+        height: 25px;
+    }
+
+    /***************  INDEX ***************/
+
+    section button {
+        height: 25px;
+        font-size: 0.45rem;
+    }
+
+    .height600px {
+        height: 400px;
+    }
+
+    .iconos a, .iconos img[class="buscar"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /***************  SOBRE NOSOTROS ***************/
+
+    .tamanio300px {
+        width: 80px;
+        height: 80px;
+    }
+
+    .width300px {
+        width: 80px;
+    }
+
+    /***************  NUESTRO EQUIPO ***************/
+
+    .flexbox6 {
+        flex-wrap: wrap;
+    }
+
+    section[class="flexbox6 nowrap"] {
+        flex-wrap: nowrap;
+    }
+
+    .relleno20 {
+        padding: 20px 20px 200px 20px;
+    }
+
+    span .imagen {
+        width: 80px;
+        height: 100px;
+    }
+
+    /***************  CONTACTO ***************/
+
+    #nombreyapellido, #mail, #numero-telefono, #nombre-compania, #mensaje {
+        height: 1.25rem;
+    }
+
+    /***************  FOOTER ***************/
+
+    footer .logo, footer nav, footer {
+        padding: 10px;
+    }
 }
