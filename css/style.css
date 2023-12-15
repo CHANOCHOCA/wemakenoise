@@ -42,7 +42,7 @@ img {
 }
 
 .relleno-completo, footer .logo, footer nav, footer {
-    padding: 17px;
+    padding: 15px;
 }
 
 .width400px {
@@ -78,7 +78,7 @@ span .imagen {
 }
 
 #nombreyapellido, #mail, #numero-telefono, #nombre-compania, #mensaje{
-    width: 93%;
+    width: 100%;
     height: 2.5rem;
 }
 
@@ -93,10 +93,6 @@ span .imagen {
 
 .espacio-flex {
     column-gap: 1.25rem;
-}
-
-.alto60vh {
-    height: 60vh;
 }
 
 .margintop20px {
@@ -138,7 +134,7 @@ section button a:hover {
 
 header {
     position: sticky;
-    box-shadow: 15px 0 15px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.3);
     background-color: white;
     z-index: 1;
     transition: top 0.3s ease-in-out;
@@ -212,12 +208,17 @@ input, textarea {
     margin-bottom: 3%;
 }
 
+.background-image h1 {
+    margin-top: 0;
+}
+
 /***************  CONTACTO ***************/
 
-.verde {
-    height: inherit;
+div[class="mitad-pantalla verde"] {
     background-color: #85c441;
-    padding-left: 3%;
+    width: calc(100% - 30px);
+    padding: 0 15px 15px 15px;
+    height: 100%;
 }
 
 /***************  FOOTER ***************/
@@ -433,14 +434,6 @@ a {
     }
 
     /***************  CONTACTO ***************/
-
-    .alto60vh {
-        height: auto;
-    }
-
-    .verde {
-        padding-bottom: 20px;
-    }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 769px) {
@@ -521,9 +514,46 @@ a {
         height: 1.25rem;
     }
 
+    div[class="mitad-pantalla verde"] {
+        padding: 0 15px;
+    }
+
+    .alto60vh {
+        height: 60vh;
+    }
+
     /***************  FOOTER ***************/
 
     footer .logo, footer nav, footer {
         padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1025px) { /* PORTÁTIL */
+    header, .relleno-completo {
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+
+    .width400px {
+        width: 300px;
+    }
+
+    article .imagen {
+        width: 300px;
+        height: 250px;
+    }
+
+    .width300px {
+        width: 140px;
+    }
+
+    .tamanio300px, span .imagen {
+        width: 140px;
+        height: 140px;
+    }
+
+    .relleno20 {
+        padding: 70px 70px 200px 70px;
     }
 }
