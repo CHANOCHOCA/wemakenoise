@@ -123,7 +123,14 @@ button[type="button"]:focus, button[type="button"]:active, button[type="button"]
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+
+    .card-blog-responsive .card {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 2560px) {
 
     .responsive-row {
         flex-direction: row !important;
@@ -144,16 +151,13 @@ button[type="button"]:focus, button[type="button"]:active, button[type="button"]
     /********** INDEX **********/
 
     .responsive-grid1 {
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     /********** BLOG **********/
 
     .card-blog-responsive {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 0 1rem;
     }
 
     .card-blog-responsive > *{
@@ -211,10 +215,7 @@ button[type="button"]:focus, button[type="button"]:active, button[type="button"]
     /********** NUESTRO EQUIPO **********/
 
     .card-sobre-nosotros4-responsive {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 1rem;
-        row-gap: 1rem;
     }
 
     .card-sobre-nosotros4-responsive > * {
