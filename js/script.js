@@ -38,3 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return src.endsWith("boton-relleno.svg") ? "assets/index/boton.svg" : "assets/index/boton-relleno.svg";
     }
 });
+
+window.addEventListener('scroll', function() {
+    const elements = document.getElementsByClassName('scroll-animate');
+    Array.from(elements).forEach(function(element) {
+        const position = element.getBoundingClientRect();
+
+        // checking whether fully visible
+        if(position.top >= 0 && position.bottom <= window.innerHeight) {
+            element.classList.add('show');
+        }
+    });
+});

@@ -18,10 +18,15 @@ header nav {
     transition: top 0.5s;
 }
 
-header .btn, footer .btn {
+header .btn, footer .btn,
+header .btn:active, footer .btn:active,
+header .btn:hover, footer.btn:hover,
+header .btn:focus, footer.btn:focus,
+header .btn:disabled, footer.btn:disabled {
     background: linear-gradient(90deg, rgba(0,186,195,1) 0%, rgba(133,196,65,1) 35%, rgba(114,71,156,1) 100%);
-    border-color: black;
-    color: #231f20;
+    border: 1px solid black !important;
+    border-radius: 10px !important;
+    color: #231f20 !important;
 }
 
 .navbar-collapse {
@@ -46,11 +51,13 @@ footer {
     color: white !important;
 }
 
-.nav-link, .text-decoration-none {
+.navbar-nav > *, .text-decoration-none {
     transition: 1s;
 }
-.nav-link:hover, .text-decoration-none:hover {
+.navbar-nav > *:hover, .text-decoration-none:hover {
     background-color: #85c441;
+    border: 2px solid transparent;
+    border-radius: 10px;
 }
 
 input:focus, textarea:focus {
@@ -67,6 +74,15 @@ input:focus, textarea:focus {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;
+}
+
 /********** INDEX **********/
 
 .video {
@@ -80,22 +96,31 @@ video {
     object-fit: cover;
 }
 
-button[type="button"]:focus, button[type="button"]:active, button[type="button"] {
+
+#miAcordeon2 [type="button"]:focus, #miAcordeon2 button[type="button"]:active, #miAcordeon2 button[type="button"] {
     border: none;
-    box-shadow: none;
     background-color: transparent;
 } /* botones de la sección "testimonios" */
+
+#miAcordeon1 .collapsing, #miAcordeon2 .collapsing {
+    -webkit-transition: all 0.5s ease !important;
+    -moz-transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease !important;
+    transition: all 0.5s ease !important;
+}
+
+.scroll-animate {
+    transform: translateY(100px);
+    transition: transform 1s;
+}
+.scroll-animate.show {
+    transform: translateY(0);
+}
 
 /********** BLOG **********/
 
 .row { /* Desborde de cards */
     --bs-gutter-x: 0;
-}
-
-/********** SOBRE NOSOTROS **********/
-
-.circular {
-    border-radius: 50%;
 }
 
 /********** NUESTRO EQUIPO **********/
@@ -110,17 +135,31 @@ button[type="button"]:focus, button[type="button"]:active, button[type="button"]
     height: 400px;
 }
 
-.accordion-button:focus, .accordion-button:active,
-.accordion-button:not(:focus):not(.collapsed), .accordion-button.collapsed {
-    background-color: unset;
+.accordion-button:focus,
+.accordion-button:active,
+.accordion-button:not(:focus):not(.collapsed),
+.accordion-button.collapsed {
     border-color: unset;
     box-shadow: none;
     color: black;
 }
 
-.accordion-button:focus::after, .accordion-button:active::after,
-.accordion-button:not(:focus):not(.collapsed)::after, .accordion-button.collapsed::after {
+.accordion-button:focus::after,
+.accordion-button:active::after,
+.accordion-button:not(:focus):not(.collapsed)::after,
+.accordion-button.collapsed::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-flush .accordion-item button {
+    background-color: white;
+    transition: 1s ease-in-out;
+}
+
+.accordion-flush .accordion-item button:hover,
+.accordion-button:not(:focus):not(.collapsed),
+.accordion-button:focus:not(.collapsed) {
+    background-color: #85c441;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 768px) {
@@ -226,5 +265,54 @@ button[type="button"]:focus, button[type="button"]:active, button[type="button"]
         width: auto;
         height: auto;
         aspect-ratio: 1/1;
+    }
+}
+
+/* Responsive en 1024px */
+@media (min-width: 1024px) {
+    .accordion-flush .accordion-item button {
+        display: block;
+        border: none;
+    }
+
+    .flex-responsive {
+        display: flex;
+    }
+
+    div[class="d-flex flex-column align-items-center gap-3"] {
+        flex-direction: row !important;
+    }
+
+    div[class="d-flex flex-column align-items-center gap-3"] > * {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    section[class="bg-verde container pt-5 pb-5"] {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 3rem;
+        background-color: #85c441;
+    }
+
+    section[class="bg-verde container pt-5 pb-5"] > * {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1440px) {
+    section[class="container pt-4"] {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    div[class="d-flex flex-column align-items-center gap-3"] > * {
+        margin: 0;
+    }
+
+    #miAcordeon2 img {
+        width: 70px;
+        height: 70px;
     }
 }
